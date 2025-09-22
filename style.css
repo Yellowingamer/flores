@@ -1,3 +1,49 @@
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    /* Ocultamos ambos contenedores al inicio */
+    .contenedor, .container {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    /* Estado oculto */
+    .oculto {
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0.95);
+    }
+    /* Letras tipo neón */
+    .neon-button {
+      font-size: 2rem;
+      color: #0ff;
+      text-shadow:
+        0 0 5px #0ff,
+        0 0 10px #0ff,
+        0 0 20px #0ff,
+        0 0 40px #0ff;
+      border: 2px solid #0ff;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: transparent;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+    .neon-button:hover {
+      transform: scale(1.1);
+    }
 *,
 *::after,
 *::before {
